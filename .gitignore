@@ -4,6 +4,7 @@
 /ProjectSettings/
 /Temp/
 /obj/
+/.vs/
 .vsconfig
 *.pidb
 *.suo
