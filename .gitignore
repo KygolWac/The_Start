@@ -15,7 +15,6 @@
 *.sln
 *.userprefs
 *.DS_Store
-*.meta
 *.csproj
 *.unitypackage
 *.dll
