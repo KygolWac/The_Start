@@ -1,3 +1,3 @@
 # The_Start
 
-This is a game test
+This is where we start.
