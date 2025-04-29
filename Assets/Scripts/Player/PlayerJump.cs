@@ -6,8 +6,10 @@ public class PlayerJump : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private float jumpSpeed;
+    
     private int jumpTimes = 1;
     private PhysicsCheck physicsCheck;
+    private PlayerMove playerMove;
     private Animator anim;
     
     //[SerializeField] private float jumpForce;
@@ -15,6 +17,7 @@ public class PlayerJump : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        playerMove = GetComponent<PlayerMove>();
         physicsCheck = GetComponentInChildren<PhysicsCheck>();
     }
 
@@ -22,7 +25,6 @@ public class PlayerJump : MonoBehaviour
     void Update()
     {
         PlayerJumping();
-        SetAnimator();
     }
 
     private void PlayerJumping()
@@ -32,37 +34,14 @@ public class PlayerJump : MonoBehaviour
             if (jumpTimes > 0)
             {
                 // playerRb.AddForce(new Vector2(0, moveForce * moveContorller));
-                PlayerMove.playerRb.velocity = new Vector2(PlayerMove.playerRb.velocity.x, jumpSpeed);
+                playerMove.playerRb.velocity = new Vector2(playerMove.playerRb.velocity.x, jumpSpeed);
                 jumpTimes--;
             }
         }
-    }
-
-    private void SetAnimator()
-    {
         if (physicsCheck.isGrounded)
         {
             jumpTimes = 1;
-            anim.SetBool("isJumping", false);
-            anim.SetBool("isFalling", false);
-        }
-        else
-        {
-            if (PlayerMove.playerRb.velocity.y > 0.1f)
-            {
-                anim.SetBool("isJumping", true);
-                anim.SetBool("isFalling", false);
-            }
-            else if (PlayerMove.playerRb.velocity.y < -0.1f)
-            {
-                anim.SetBool("isFalling", true);
-                anim.SetBool("isJumping", false);
-            }
-            else
-            {
-                anim.SetBool("isJumping", false);
-                anim.SetBool("isFalling", false);
-            }
         }
     }
+
 }

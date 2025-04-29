@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BackgroundContorller : MonoBehaviour
 {
-    //private PlayerMove playerMove;
+    private PlayerMove playerMove;
     private float rollSpeed = 2.5f;//滚动速度
     private float right; //右边界
     private float left; //左边界
@@ -18,6 +18,7 @@ public class BackgroundContorller : MonoBehaviour
         right = transform.position.x + sRender.bounds.extents.x / 3;
         left = transform.position.x - sRender.bounds.extents.x / 3;
         distance = right - left;//左右边界相减得到距离
+        playerMove = GameObject.Find("Player").GetComponent<PlayerMove>();
     }
 
     // Update is called once per frame
@@ -29,7 +30,7 @@ public class BackgroundContorller : MonoBehaviour
 
     private void BackgroundMove()
     {
-        transform.localPosition += rollSpeed * Vector3.right * Time.deltaTime * (PlayerMove.playerRb.velocity.x / 12);
+        transform.localPosition += rollSpeed * Vector3.right * Time.deltaTime * (playerMove.playerRb.velocity.x / 12);
 
         //判断是否到达右边界
         if (transform.position.x > right)

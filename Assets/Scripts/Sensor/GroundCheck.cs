@@ -6,6 +6,7 @@ public class PhysicsCheck : MonoBehaviour
 {
     // Start is called before the first frame update
     public bool isGrounded = false;
+
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Ground"))
@@ -32,4 +33,5 @@ public class PhysicsCheck : MonoBehaviour
     {
         
     }
+    
 }
