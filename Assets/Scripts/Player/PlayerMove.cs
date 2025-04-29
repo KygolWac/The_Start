@@ -22,7 +22,25 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PlayerMoving();
+        PlayerChangeDiretion();
+        SetAnimator();
+    }
 
+    private void PlayerChangeDiretion()
+    {
+        if (playerRb.velocity.x > 0.02f)
+        {
+            transform.localScale = new Vector2(1, 1);
+        }
+        if (playerRb.velocity.x < -0.02f)
+        {
+            transform.localScale = new Vector2(-1, 1);
+        }
+    }
+
+    private void PlayerMoving()
+    {
         moveContorller = Input.GetAxisRaw("Horizontal");
         // Debug.Log(moveContorller);
         //playerRb.velocity = new Vector2(moveSpeed * moveContorller, playerRb.velocity.y);
@@ -32,17 +50,6 @@ public class PlayerMove : MonoBehaviour
             playerRb.velocity = new Vector2(moveSpeed * Mathf.Sign(playerRb.velocity.x), playerRb.velocity.y);
         }
         // playerRb.velocity = new Vector2(Mathf.Min(Mathf.Abs(playerRb.velocity.x), moveSpeed) * moveContorller, playerRb.velocity.y);
-        
-        if(playerRb.velocity.x > 0.02f)
-        {
-            transform.localScale = new Vector2(1, 1);
-        }
-        if(playerRb.velocity.x < -0.02f)
-        {
-            transform.localScale = new Vector2(-1, 1);
-        }
-
-        SetAnimator();
     }
 
     private void SetAnimator()

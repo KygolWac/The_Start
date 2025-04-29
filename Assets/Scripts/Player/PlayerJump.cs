@@ -5,12 +5,13 @@ using UnityEngine;
 public class PlayerJump : MonoBehaviour
 {
     // Start is called before the first frame update
-
+    [SerializeField] private float jumpSpeed;
+    private int jumpTimes = 1;
     private PhysicsCheck physicsCheck;
     private Animator anim;
-    private int jumpTimes = 1;
+    
     //[SerializeField] private float jumpForce;
-    [SerializeField] private float jumpSpeed;
+    
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -19,6 +20,12 @@ public class PlayerJump : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        PlayerJumping();
+        SetAnimator();
+    }
+
+    private void PlayerJumping()
     {
         if (Input.GetButtonDown("Jump"))
         {
@@ -29,7 +36,6 @@ public class PlayerJump : MonoBehaviour
                 jumpTimes--;
             }
         }
-        SetAnimator();
     }
 
     private void SetAnimator()
@@ -39,7 +45,6 @@ public class PlayerJump : MonoBehaviour
             jumpTimes = 1;
             anim.SetBool("isJumping", false);
             anim.SetBool("isFalling", false);
-
         }
         else
         {

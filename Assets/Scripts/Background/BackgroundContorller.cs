@@ -5,7 +5,7 @@ using UnityEngine;
 public class BackgroundContorller : MonoBehaviour
 {
     //private PlayerMove playerMove;
-    [SerializeField] private float rollSpeed = 2.5f;//滚动速度
+    private float rollSpeed = 2.5f;//滚动速度
     private float right; //右边界
     private float left; //左边界
     private float distance; //左右边界距离
@@ -17,15 +17,19 @@ public class BackgroundContorller : MonoBehaviour
         SpriteRenderer sRender = GetComponent<SpriteRenderer>();
         right = transform.position.x + sRender.bounds.extents.x / 3;
         left = transform.position.x - sRender.bounds.extents.x / 3;
-
         distance = right - left;//左右边界相减得到距离
     }
 
     // Update is called once per frame
     void Update()
     {
-        //使背景图片向右移动
-        transform.localPosition += rollSpeed * Vector3.right * Time.deltaTime * (PlayerMove.playerRb.velocity.x/12);
+        //使背景图片移动
+        BackgroundMove();
+    }
+
+    private void BackgroundMove()
+    {
+        transform.localPosition += rollSpeed * Vector3.right * Time.deltaTime * (PlayerMove.playerRb.velocity.x / 12);
 
         //判断是否到达右边界
         if (transform.position.x > right)
