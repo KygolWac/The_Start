@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class CameraContorller : MonoBehaviour
 {
+    public Camera mainCamera;
     // Start is called before the first frame update
     void Start()
     {
+        mainCamera = GetComponent<Camera>();
         Debug.Log("game started");
     }
 

@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PhysicsCheck : MonoBehaviour
+public class GroundCheck : MonoBehaviour
 {
     // Start is called before the first frame update
     public bool isGrounded = false;
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("Ground"))
+        if (other.CompareTag("Ground") || other.CompareTag("Wall"))
         {
             isGrounded = true;
         }
@@ -17,7 +17,7 @@ public class PhysicsCheck : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Ground"))
+        if (other.CompareTag("Ground") || other.CompareTag("Wall"))
         {
             isGrounded = false;
         }

@@ -5,7 +5,11 @@ using UnityEngine.Windows;
 
 public class PlayerMove : MonoBehaviour
 {
-
+    void Awake()
+    {
+        Application.targetFrameRate = 60;//锁定最大帧率为60帧
+        //Application.targetFrameRate = 30;//锁定最大帧率为30帧
+    }
     // Start is called before the first frame update
     public Rigidbody2D playerRb;
     public float moveContorller;
@@ -57,7 +61,7 @@ public class PlayerMove : MonoBehaviour
                 new Vector2
                     (
                         moveForce * moveContorller * -slopeCheck.slopeNormalPerp.x, 
-                        moveForce * moveContorller * -slopeCheck.slopeNormalPerp.y
+                        moveForce * moveContorller * -slopeCheck.slopeNormalPerp.y * 0.665f
                     )
                 );
         }

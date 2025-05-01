@@ -8,14 +8,14 @@ public class PlayerAnim : MonoBehaviour
     private enum PlayerState { idle, run, jump, fall, climb};
     private PlayerState playerState;
     private Animator anim;
-    private PhysicsCheck physicsCheck;
+    private GroundCheck GroundCheck;
     private PlayerMove playerMove;
 
     void Start()
     {
         anim = GetComponent<Animator>();
         playerMove = GetComponent<PlayerMove>();
-        physicsCheck = GetComponentInChildren<PhysicsCheck>();
+        GroundCheck = GetComponentInChildren<GroundCheck>();
     }
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ public class PlayerAnim : MonoBehaviour
         {
             playerState = PlayerState.run;
         }
-        if(physicsCheck.isGrounded == false)
+        if(GroundCheck.isGrounded == false)
         {
             if (playerMove.playerRb.velocity.y > 0.2f)
             {

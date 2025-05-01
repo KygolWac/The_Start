@@ -8,7 +8,7 @@ public class PlayerJump : MonoBehaviour
     [SerializeField] private float jumpSpeed;
     
     private int jumpTimes = 1;
-    private PhysicsCheck physicsCheck;
+    private GroundCheck groundCheck;
     private PlayerMove playerMove;
     private Animator anim;
     
@@ -18,7 +18,7 @@ public class PlayerJump : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         playerMove = GetComponent<PlayerMove>();
-        physicsCheck = GetComponentInChildren<PhysicsCheck>();
+        groundCheck = GetComponentInChildren<GroundCheck>();
     }
 
     // Update is called once per frame
@@ -38,7 +38,7 @@ public class PlayerJump : MonoBehaviour
                 jumpTimes--;
             }
         }
-        if (physicsCheck.isGrounded)
+        if (groundCheck.isGrounded)
         {
             jumpTimes = 1;
         }
