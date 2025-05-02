@@ -16,7 +16,7 @@ public class BackgroundContorller : MonoBehaviour
     void Start()
     {
         //计算左右边界。Bounds是当图形的边界框
-        Debug.Log("BG st");
+        //Debug.Log("BG st");
         mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
         // SpriteRenderer sRender = GetComponent<SpriteRenderer>();
         // right = transform.position.x + sRender.bounds.extents.x / 3;
@@ -28,7 +28,7 @@ public class BackgroundContorller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("BG move");
+        //Debug.Log("BG move");
         //使背景图片移动
         BackgroundMove();
     }

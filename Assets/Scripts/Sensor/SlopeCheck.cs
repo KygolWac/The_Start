@@ -42,7 +42,7 @@ public class SlopeCheck : MonoBehaviour
     private void Check()
     {
         Vector2 checkPos = transform.position - (Vector3)(new Vector2(0.0f, capsuleColliderSize.y / 2));
-        Debug.Log("Checking slope");
+        //Debug.Log("Checking slope");
         SlopeCheckHorizontal(checkPos);
         SlopeCheckVertical(checkPos);
     }
@@ -54,7 +54,7 @@ public class SlopeCheck : MonoBehaviour
 
         if (slopeHitFront)
         {
-            Debug.Log("SlopeHitFront");
+            //Debug.Log("SlopeHitFront");
             isOnSlope = true;
 
             slopeSideAngle = Vector2.Angle(slopeHitFront.normal, Vector2.up);
@@ -62,7 +62,7 @@ public class SlopeCheck : MonoBehaviour
         }
         else if (slopeHitBack)
         {
-            Debug.Log("SlopeHitBack");
+            //Debug.Log("SlopeHitBack");
             isOnSlope = true;
 
             slopeSideAngle = Vector2.Angle(slopeHitBack.normal, Vector2.up);

@@ -1,5 +1,5 @@
 
 public interface IInteractable
 {
-    void TriggerAtion();
+    void TriggerAction();
 }
