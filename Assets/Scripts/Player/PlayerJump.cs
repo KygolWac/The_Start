@@ -5,9 +5,10 @@ using UnityEngine;
 public class PlayerJump : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private float jumpSpeed;
-    
-    private int jumpTimes = 1;
+    [SerializeField] 
+    private float jumpSpeed;
+    [SerializeField]
+    private int jumpTimes = 2;
     private GroundCheck groundCheck;
     private PlayerMove playerMove;
     private Animator anim;
@@ -35,12 +36,13 @@ public class PlayerJump : MonoBehaviour
             {
                 // playerRb.AddForce(new Vector2(0, moveForce * moveContorller));
                 playerMove.playerRb.velocity = new Vector2(playerMove.playerRb.velocity.x, jumpSpeed);
+                groundCheck.isGrounded = false;
                 jumpTimes--;
             }
         }
         if (groundCheck.isGrounded)
         {
-            jumpTimes = 1;
+            jumpTimes = 2;
         }
     }
 
