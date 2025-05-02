@@ -5,7 +5,7 @@ using UnityEngine;
 public class BackgroundContorller : MonoBehaviour
 {
     private Camera mainCamera;
-    private PlayerMove playerMove;
+    //private PlayerMove playerMove;
     private float rollSpeed = 2.5f;//滚动速度
     private float verticalSpeed = 5f;
     // private float right; //右边界
@@ -16,18 +16,19 @@ public class BackgroundContorller : MonoBehaviour
     void Start()
     {
         //计算左右边界。Bounds是当图形的边界框
-
+        Debug.Log("BG st");
         mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
-        SpriteRenderer sRender = GetComponent<SpriteRenderer>();
+        // SpriteRenderer sRender = GetComponent<SpriteRenderer>();
         // right = transform.position.x + sRender.bounds.extents.x / 3;
         // left = transform.position.x - sRender.bounds.extents.x / 3;
         //distance = right - left;//左右边界相减得到距离
-        playerMove = GameObject.Find("Player").GetComponent<PlayerMove>();
+        //playerMove = GameObject.Find("Player").GetComponent<PlayerMove>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("BG move");
         //使背景图片移动
         BackgroundMove();
     }
