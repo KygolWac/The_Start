@@ -21,7 +21,7 @@ public class PlayerAnim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerMove.moveContorller == 0)
+        if (playerMove.moveContorller.inputDiretion.x == 0)
         {
             playerState = PlayerState.idle;
         } else

@@ -10,12 +10,10 @@ public class PlayerSign : MonoBehaviour
     [SerializeField]
     private bool canPress = false;
 
-    private Animator anim;
 
     private void Awake()
     {
         // anim = GetComponentInChildren<Animator>();
-        anim = signSprite.GetComponent<Animator>();
     }
     private void OnTriggerStay2D(Collider2D other)
     {

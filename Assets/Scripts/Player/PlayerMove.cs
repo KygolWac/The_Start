@@ -5,31 +5,30 @@ using UnityEngine.Windows;
 
 public class PlayerMove : MonoBehaviour
 {
-    void Awake()
-    {
-        Application.targetFrameRate = 60;//锁定最大帧率为60帧
-        //Application.targetFrameRate = 30;//锁定最大帧率为30帧
-    }
     // Start is called before the first frame update
     public Rigidbody2D playerRb;
-    public float moveContorller;
-    
-    [SerializeField] 
+    public PlayerController moveContorller;
+
+    [SerializeField]
     private float moveSpeed;
+    [SerializeField] 
+    private float moveDirection;
     [SerializeField] 
     private float moveForce;
     [SerializeField]
-
     private SlopeCheck slopeCheck;
-    
-    void Start()
+
+
+
+    private void Start()
     {
+        moveContorller = GetComponent<PlayerController>();
         playerRb = GetComponent<Rigidbody2D>();
         slopeCheck = GetComponentInChildren<SlopeCheck>();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         PlayerMoving();
         PlayerChangeDiretion();
@@ -49,19 +48,20 @@ public class PlayerMove : MonoBehaviour
 
     private void PlayerMoving()
     {
-        moveContorller = UnityEngine.Input.GetAxisRaw("Horizontal");
+        moveDirection = moveContorller.inputDiretion.x;
+        //moveContorller = 0;UnityEngine.Input.GetAxisRaw("Horizontal");
         // Debug.Log(moveContorller);
-        if(!slopeCheck.isOnSlope)
+        if (!slopeCheck.isOnSlope)
         {
-            playerRb.AddForce(new Vector2(moveForce * moveContorller, 0));
+            playerRb.AddForce(new Vector2(moveForce * moveDirection, 0));
         }else
         {
             playerRb.AddForce
                 (
                 new Vector2
                     (
-                        moveForce * moveContorller * -slopeCheck.slopeNormalPerp.x, 
-                        moveForce * moveContorller * -slopeCheck.slopeNormalPerp.y * 0.665f
+                        moveForce * moveDirection * -slopeCheck.slopeNormalPerp.x, 
+                        moveForce * moveDirection * -slopeCheck.slopeNormalPerp.y * 0.665f
                     )
                 );
         }
