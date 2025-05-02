@@ -5,7 +5,7 @@ using UnityEngine;
 public class BackgroundContorller : MonoBehaviour
 {
     private Camera mainCamera;
-    //private PlayerMove playerMove;
+    private PlayerMove playerMove;
     private float rollSpeed = 2.5f;//滚动速度
     private float verticalSpeed = 5f;
     // private float right; //右边界
