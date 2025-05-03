@@ -7,13 +7,13 @@ public class Chest : MonoBehaviour, IInteractable
 {
     [SerializeField]
     private bool isDone = false;
-    private BoxCollider2D collider2D;
+    private BoxCollider2D chestCollider;
     private Animator anim;
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
-        collider2D = GetComponent<BoxCollider2D>();
+        chestCollider = GetComponent<BoxCollider2D>();
     }
     public void TriggerAction()
     {
@@ -30,12 +30,8 @@ public class Chest : MonoBehaviour, IInteractable
         }
         anim.SetBool("isOpening", true);
         isDone = true;
-        collider2D.enabled = false;
+        chestCollider.enabled = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

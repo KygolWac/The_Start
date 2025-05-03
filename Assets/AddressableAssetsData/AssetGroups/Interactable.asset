@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Interactable
+  m_EditorClassIdentifier: 
+  m_GroupName: Interactable
+  m_Data:
+    m_SerializedData: []
+  m_GUID: a35bd757462d06a4dae2dd9370f7d0c9
+  m_SerializeEntries:
+  - m_GUID: 4567e66b5279551439e57b45d23ae3f3
+    m_Address: Chest
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b84807c78823e234ca3c60c739cbcaa7
+    m_Address: Bonfire
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: f537fa8ee272a6b498f02b7b0b381199, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: f1dff3e937d92684ebaf7bf7a74fa72f, type: 2}
+    - {fileID: 11400000, guid: e8bb3017e4f33d04d910af44642af6c5, type: 2}
