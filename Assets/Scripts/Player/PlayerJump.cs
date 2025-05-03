@@ -14,6 +14,8 @@ public class PlayerJump : MonoBehaviour
     [SerializeField]
     private int canJump = 2;
     private float jumpDirection;
+    [SerializeField]
+    private float cantJumpTime = 0.2f;
     private float currentTime = 0f;
     private GroundCheck groundCheck;
     private PlayerMove playerMove;
@@ -39,7 +41,7 @@ public class PlayerJump : MonoBehaviour
         jumpDirection = moveContorller.inputDiretion.y;
         if (jumpDirection > 0)
         {
-            if (canJump > 0 && currentTime > 0.35f)
+            if (canJump > 0 && currentTime > cantJumpTime)
             {
                 // playerRb.AddForce(new Vector2(0, moveForce * moveContorller));
                 playerMove.playerRb.velocity = new Vector2(playerMove.playerRb.velocity.x, jumpSpeed);

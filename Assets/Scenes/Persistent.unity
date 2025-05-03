@@ -805,6 +805,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.18167114
       objectReference: {fileID: 0}
+    - target: {fileID: 5389060990662353289, guid: 36d6b97fa11c39d4ebcc3a52b189c12c, type: 3}
+      propertyPath: cantJumpTime
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 6177606454727359951, guid: 36d6b97fa11c39d4ebcc3a52b189c12c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1008,7 +1012,7 @@ MonoBehaviour:
   defualtPosition: {x: -24, y: -6, z: 0}
   loadEventSO: {fileID: 11400000, guid: a574b6ec64674ba498b4a4526707d7ed, type: 2}
   firstLoadScene: {fileID: 11400000, guid: 7ed771b654db7814d9031ef2124c1ff5, type: 2}
-  fadeDuration: 1
+  fadeDuration: 0.6
   afterSceneLoadedEvent: {fileID: 11400000, guid: a8af3258fce1c3c4aa895d961f7e21fa, type: 2}
   fadeEvent: {fileID: 11400000, guid: 9e41bacc73a76d8449055be40b58039f, type: 2}
   currentLoadScene: {fileID: 0}
