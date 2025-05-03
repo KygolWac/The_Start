@@ -6,7 +6,7 @@ public class PlayerDead : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator anim;
-    private Vector2 pos;
+    public Vector2 pos;
     // Start is called before the first frame update
     void Start()
     {
