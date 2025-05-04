@@ -134,13 +134,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExitDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 4837807776881711578, guid: 8ce183183e6247349abfaf5a797503a9, type: 3}
+      propertyPath: positionToGo.x
+      value: -52.25
+      objectReference: {fileID: 0}
     - target: {fileID: 8770960150887468508, guid: 8ce183183e6247349abfaf5a797503a9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 91.82129
       objectReference: {fileID: 0}
     - target: {fileID: 8770960150887468508, guid: 8ce183183e6247349abfaf5a797503a9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.853796
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 8770960150887468508, guid: 8ce183183e6247349abfaf5a797503a9, type: 3}
       propertyPath: m_LocalPosition.z

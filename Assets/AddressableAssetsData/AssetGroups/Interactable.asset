@@ -17,8 +17,33 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: a35bd757462d06a4dae2dd9370f7d0c9
   m_SerializeEntries:
+  - m_GUID: 0460e03ecfc6bfc49a8451f861abc21a
+    m_Address: MovePlantform
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0b0aad8ea3f34334bbe4c7ee94db4cb3
+    m_Address: Plantform1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 14b10f6b0a47a4741a8cef3688ee7c1e
+    m_Address: 'CheckPoint '
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2dbb437edc2810e4c93edc0d5358599a
+    m_Address: Trap
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4567e66b5279551439e57b45d23ae3f3
     m_Address: Chest
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8ce183183e6247349abfaf5a797503a9
+    m_Address: ExitDoor
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

@@ -109,14 +109,14 @@ public class SceneLoader : MonoBehaviour
 
         yield return new WaitForSeconds(fadeDuration);
         
-        yield return currentLoadScene.scenceReference.UnLoadScene();
+        yield return currentLoadScene.sceneReference.UnLoadScene();
         
         LoadNewScene();
     }
 
     private void LoadNewScene()
     {
-        var loadingOperation = sceneToLoad.scenceReference.LoadSceneAsync(LoadSceneMode.Additive, true);
+        var loadingOperation = sceneToLoad.sceneReference.LoadSceneAsync(LoadSceneMode.Additive, true);
         loadingOperation.Completed += OnLoadCompleted;
     }
 
