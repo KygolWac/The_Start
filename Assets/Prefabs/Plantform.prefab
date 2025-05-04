@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1840340820972167452}
   - component: {fileID: 5777943347166297271}
   m_Layer: 0
-  m_Name: Plantform1
+  m_Name: Plantform
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

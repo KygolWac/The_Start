@@ -2752,15 +2752,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3634805100372202073, guid: 8ce183183e6247349abfaf5a797503a9, type: 3}
       propertyPath: m_Name
-      value: EenterDoor
+      value: EnterDoorFromLevel2.0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3634805100372202073, guid: 8ce183183e6247349abfaf5a797503a9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4837807776881711578, guid: 8ce183183e6247349abfaf5a797503a9, type: 3}
       propertyPath: sceneToGo
       value: 
-      objectReference: {fileID: 11400000, guid: 7ed771b654db7814d9031ef2124c1ff5, type: 2}
+      objectReference: {fileID: 11400000, guid: b0ee62a9e5311f743b995f8eebf3ce11, type: 2}
     - target: {fileID: 4837807776881711578, guid: 8ce183183e6247349abfaf5a797503a9, type: 3}
       propertyPath: positionToGo.x
-      value: 23
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837807776881711578, guid: 8ce183183e6247349abfaf5a797503a9, type: 3}
+      propertyPath: positionToGo.y
+      value: -12.3
       objectReference: {fileID: 0}
     - target: {fileID: 8770960150887468508, guid: 8ce183183e6247349abfaf5a797503a9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2880,7 +2888,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1495300194}
+    m_TransformParent: {fileID: 831074548}
     m_Modifications:
     - target: {fileID: 7204561052715924270, guid: b84807c78823e234ca3c60c739cbcaa7, type: 3}
       propertyPath: m_Name
@@ -3090,6 +3098,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 328824552}
+  - {fileID: 565142918}
+  - {fileID: 902529495}
+  - {fileID: 1555949180}
+  - {fileID: 1608664963}
   m_Father: {fileID: 1495300194}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &860083997
@@ -3160,7 +3172,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1495300194}
+    m_TransformParent: {fileID: 831074548}
     m_Modifications:
     - target: {fileID: 796211132625100558, guid: 4567e66b5279551439e57b45d23ae3f3, type: 3}
       propertyPath: m_Name
@@ -3510,10 +3522,6 @@ Transform:
   - {fileID: 1508467370}
   - {fileID: 275866263}
   - {fileID: 831074548}
-  - {fileID: 565142918}
-  - {fileID: 902529495}
-  - {fileID: 1555949180}
-  - {fileID: 1608664963}
   - {fileID: 1824319590}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3840,7 +3848,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1495300194}
+    m_TransformParent: {fileID: 831074548}
     m_Modifications:
     - target: {fileID: 6339022393643605991, guid: 14b10f6b0a47a4741a8cef3688ee7c1e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3902,11 +3910,19 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1495300194}
+    m_TransformParent: {fileID: 831074548}
     m_Modifications:
     - target: {fileID: 3634805100372202073, guid: 8ce183183e6247349abfaf5a797503a9, type: 3}
       propertyPath: m_Name
-      value: ExitDoor
+      value: ExitDoorToLevel3.0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837807776881711578, guid: 8ce183183e6247349abfaf5a797503a9, type: 3}
+      propertyPath: sceneToGo
+      value: 
+      objectReference: {fileID: 11400000, guid: 24b211890bd13d24aa0c334e0a517359, type: 2}
+    - target: {fileID: 4837807776881711578, guid: 8ce183183e6247349abfaf5a797503a9, type: 3}
+      propertyPath: positionToGo.x
+      value: -44.3
       objectReference: {fileID: 0}
     - target: {fileID: 8770960150887468508, guid: 8ce183183e6247349abfaf5a797503a9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4298,24 +4314,55 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 786907881}
+  - {fileID: 208834696}
+  - {fileID: 668988879}
   - {fileID: 1145416538}
   - {fileID: 1554775780}
   - {fileID: 1725101267}
   - {fileID: 1258563985}
   - {fileID: 986495146}
-  - {fileID: 208834696}
   - {fileID: 1810507071}
   - {fileID: 860083998}
   - {fileID: 200907009}
   - {fileID: 2038681492}
   - {fileID: 1302233045}
-  - {fileID: 668988879}
   - {fileID: 1697359168}
   - {fileID: 1753432435}
   - {fileID: 1768352923}
   - {fileID: 2053573167}
   - {fileID: 504185006}
   m_Father: {fileID: 1495300194}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1915034059
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1915034060}
+  m_Layer: 0
+  m_Name: DefaultCheckpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1915034060
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915034059}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -36.25, y: -12, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2001702727
 GameObject:
@@ -17585,7 +17632,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 6
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -22164,8 +22211,8 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300096, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 4
     m_Data: {fileID: 21300148, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
   - m_RefCount: 4
@@ -22174,8 +22221,8 @@ Tilemap:
     m_Data: {fileID: 21300146, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
   - m_RefCount: 85
     m_Data: {fileID: 21300002, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300096, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300164, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
   - m_RefCount: 1
@@ -22910,3 +22957,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 1495300194}
   - {fileID: 316473897}
+  - {fileID: 1915034060}
