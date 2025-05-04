@@ -1,40 +1,57 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerDead : MonoBehaviour
 {
+    [SerializeField]
+    private float fixedTime;
+    private GameObject playerObject;
+
+    //public Transform checkpointTransform;
+    public Vector3 checkpointPosition;
     private Rigidbody2D rb;
     private Animator anim;
-    public Vector2 pos;
-    // Start is called before the first frame update
+
+
+    private void Awake()
+    {
+        playerObject = GameObject.Find("Player");
+        anim = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+    }
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>(); 
-        anim = GetComponent<Animator>();
-        pos = transform.position;
+        checkpointPosition = playerObject.transform.position;
+        // checkpointTransform = GetComponent<Transform>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Trap"))
         {
-            //玩家死亡
-            anim.SetTrigger("isDead");
-            rb.bodyType = RigidbodyType2D.Static;//玩家不许动
+            //TODO:玩家死亡
+            Debug.Log("Dead");
+            StartCoroutine(DeadProcess());
         }
     }
 
-    public void reBirth()
+
+    private IEnumerator DeadProcess()
     {
-        transform.position = pos;//回出生点
-        rb.bodyType = RigidbodyType2D.Dynamic;//玩家又能动了
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        anim.SetTrigger("isDead");
+        yield return new WaitForSeconds(fixedTime);
+        
+        playerObject.transform.position = checkpointPosition;
+        anim.SetTrigger("finishDead");
+        yield return new WaitForSeconds(fixedTime);
+        rb.constraints = RigidbodyConstraints2D.None;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
+
 
 }

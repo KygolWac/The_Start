@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerAnim : MonoBehaviour
 {
@@ -8,14 +9,14 @@ public class PlayerAnim : MonoBehaviour
     private enum PlayerState { idle, run, jump, fall, climb};
     private PlayerState playerState;
     private Animator anim;
-    private GroundCheck GroundCheck;
+    private GroundCheck groundChecker;
     private PlayerMove playerMove;
 
     void Start()
     {
         anim = GetComponent<Animator>();
         playerMove = GetComponent<PlayerMove>();
-        GroundCheck = GetComponentInChildren<GroundCheck>();
+        groundChecker = GetComponentInChildren<GroundCheck>();
     }
 
     // Update is called once per frame
@@ -28,7 +29,7 @@ public class PlayerAnim : MonoBehaviour
         {
             playerState = PlayerState.run;
         }
-        if(GroundCheck.isGrounded == false)
+        if(groundChecker.isGrounded == false)
         {
             if (playerMove.playerRb.velocity.y > 0.2f)
             {
@@ -45,5 +46,7 @@ public class PlayerAnim : MonoBehaviour
             }
         }
         anim.SetInteger("States", (int)playerState);
+        
     }
+
 }

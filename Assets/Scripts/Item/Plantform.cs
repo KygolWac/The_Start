@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlantformMove : MonoBehaviour
+public class Plantform : MonoBehaviour
 {
     public Transform posA, posB;
     private Transform movePos;
-    [SerializeField] private float moveSpeed;
+    [SerializeField] 
+    private float moveSpeed;
     // Start is called before the first frame update
     void Start()
     {

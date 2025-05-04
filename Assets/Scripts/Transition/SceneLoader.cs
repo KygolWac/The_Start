@@ -29,6 +29,9 @@ public class SceneLoader : MonoBehaviour
     private bool fadeScreenNeeded;
     private bool isLoading;
 
+    private GameObject playerObject;
+
+
 
     private void Awake()
     { 
@@ -48,6 +51,7 @@ public class SceneLoader : MonoBehaviour
 
     private void Start()
     {
+        playerObject = GameObject.Find("Player");
         NewGame();
     }
 
@@ -64,6 +68,8 @@ public class SceneLoader : MonoBehaviour
     private void NewGame()
     {
         sceneToLoad = firstLoadScene;
+        //…Ë÷√≥ı ºcheckpoint
+        playerObject.GetComponent<PlayerDead>().checkpointPosition = defualtPosition;
         OnLoadRequestEvent(sceneToLoad, defualtPosition, true);
     }
      
@@ -81,6 +87,7 @@ public class SceneLoader : MonoBehaviour
         sceneToLoad = locationToLoad;
         positonToGo = posToGo;
         fadeScreenNeeded = fadeNeeded;
+        playerObject.GetComponent<PlayerDead>().checkpointPosition = posToGo;
         //Debug.Log("Load scene event triggered"); 
         if (currentLoadScene != null)
         {
