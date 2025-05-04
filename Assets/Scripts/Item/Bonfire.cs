@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bonfire : MonoBehaviour, IInteractable
 {
     public GameObject signSprite;
+    private Animator anim;
     private SpriteRenderer bonfireSpriteRenderer;
     private SpriteRenderer flameSpriteRenderer;
     // Start is called before the first frame update
@@ -13,6 +14,7 @@ public class Bonfire : MonoBehaviour, IInteractable
         bonfireSpriteRenderer = GetComponent<SpriteRenderer>();
 
         flameSpriteRenderer = GameObject.Find("Flame").GetComponent<SpriteRenderer>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     public void TriggerAction()
@@ -24,6 +26,7 @@ public class Bonfire : MonoBehaviour, IInteractable
     private void BonfireInteract()
     {
         flameSpriteRenderer.enabled = !flameSpriteRenderer.enabled;
+        anim.SetBool("isBurning", flameSpriteRenderer.enabled);
     }
 
     // Update is called once per frame
