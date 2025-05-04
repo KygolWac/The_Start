@@ -2900,7 +2900,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926466994815283636, guid: b84807c78823e234ca3c60c739cbcaa7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.973068
+      value: -13
       objectReference: {fileID: 0}
     - target: {fileID: 7926466994815283636, guid: b84807c78823e234ca3c60c739cbcaa7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3893,6 +3893,10 @@ PrefabInstance:
     - target: {fileID: 8937127650686082123, guid: 14b10f6b0a47a4741a8cef3688ee7c1e, type: 3}
       propertyPath: m_Name
       value: 'CheckPoint '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937127650686082123, guid: 14b10f6b0a47a4741a8cef3688ee7c1e, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
