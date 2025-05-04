@@ -138,13 +138,41 @@ PrefabInstance:
       propertyPath: positionToGo.x
       value: -52.25
       objectReference: {fileID: 0}
+    - target: {fileID: 5062008405216761637, guid: 8ce183183e6247349abfaf5a797503a9, type: 3}
+      propertyPath: m_Size.x
+      value: 3.8753128
+      objectReference: {fileID: 0}
+    - target: {fileID: 5062008405216761637, guid: 8ce183183e6247349abfaf5a797503a9, type: 3}
+      propertyPath: m_Size.y
+      value: 4.0338135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5062008405216761637, guid: 8ce183183e6247349abfaf5a797503a9, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.042354584
+      objectReference: {fileID: 0}
+    - target: {fileID: 5062008405216761637, guid: 8ce183183e6247349abfaf5a797503a9, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0077610016
+      objectReference: {fileID: 0}
+    - target: {fileID: 5062008405216761637, guid: 8ce183183e6247349abfaf5a797503a9, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 3.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 5062008405216761637, guid: 8ce183183e6247349abfaf5a797503a9, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 3.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 6761763470100998581, guid: 8ce183183e6247349abfaf5a797503a9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7fa281f6fbb151e479e3ce7427f903d1, type: 3}
     - target: {fileID: 8770960150887468508, guid: 8ce183183e6247349abfaf5a797503a9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 91.82129
+      value: 91.96
       objectReference: {fileID: 0}
     - target: {fileID: 8770960150887468508, guid: 8ce183183e6247349abfaf5a797503a9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7
+      value: -6.01
       objectReference: {fileID: 0}
     - target: {fileID: 8770960150887468508, guid: 8ce183183e6247349abfaf5a797503a9, type: 3}
       propertyPath: m_LocalPosition.z
