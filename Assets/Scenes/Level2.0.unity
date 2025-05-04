@@ -1592,6 +1592,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1495300194}
     m_Modifications:
     - target: {fileID: 462610212875057302, guid: 0460e03ecfc6bfc49a8451f861abc21a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 462610212875057302, guid: 0460e03ecfc6bfc49a8451f861abc21a, type: 3}
       propertyPath: m_Tiles.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -1748,8 +1752,12 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1645841858138561656, guid: 0460e03ecfc6bfc49a8451f861abc21a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1645841858138561656, guid: 0460e03ecfc6bfc49a8451f861abc21a, type: 3}
       propertyPath: m_SortingOrder
-      value: -2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3912301017368082900, guid: 0460e03ecfc6bfc49a8451f861abc21a, type: 3}
       propertyPath: m_LocalPosition.x
